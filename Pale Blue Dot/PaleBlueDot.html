@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Pale Blue Dot</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Top Menu -->
+    <header id="top-menu">
+      <h1>The Pale Blue Dot</h1>
+      <nav>
+        <button id="about-earth-btn">About Earth</button>
+        <button id="quote-btn">Full Quote</button>
+        <button id="voyager-stats-btn">Voyager 1 Stats & Images</button>
+        <button id="fullscreen-btn">View Image Fullscreen</button>
+        <button id="play-music-btn">Pause Music</button>
+      </nav>
+    </header>
+
+    <!-- Image Container (Background) -->
+    <div id="image-container">
+      <img
+        id="pale-blue-dot"
+        src="https://www.nasa.gov/wp-content/uploads/2020/02/pia23645_pbd_main-16.jpg"
+        alt="Pale Blue Dot"
+      />
+    </div>
+
+    <!-- Quote Section (always visible at bottom) -->
+    <figure id="quote">
+      <blockquote>
+        <p>
+          “Look again at that dot.
+          <strong>That's here. That's home. That's us.</strong>
+          On it everyone you love, everyone you know, every human being who ever
+          was, lived out their lives—on a mote of dust suspended in a sunbeam.”
+        </p>
+        <p>
+          “Our imagined self-importance, the delusion that we have some
+          privileged position in the Universe, are challenged by this point of
+          pale light. Our planet is a lonely speck in the great enveloping
+          cosmic dark. The Earth is the only world known so far to harbor
+          life—our only home.”
+        </p>
+      </blockquote>
+      <figcaption>— Carl Sagan</figcaption>
+    </figure>
+
+    <!-- Side Menu: About Earth -->
+    <section id="about-earth-section">
+      <h2>About Earth</h2>
+      <ul>
+        <li id="population-stat"><strong>Population:</strong> Loading…</li>
+        <li><strong>Diameter:</strong> ~12,742 km</li>
+        <li>
+          <strong>Distance from Sun:</strong>
+          <span id="distance-sun">149.60</span> million km
+        </li>
+        <li><strong>Mass:</strong> ~5.972 × 10<sup>24</sup> kg</li>
+        <li><strong>Rotation Period:</strong> ~23.93 hours</li>
+        <li><strong>Orbit Period:</strong> ~365.25 days</li>
+        <li><strong>Surface Temperature:</strong> -88°C to 58°C</li>
+        <li><strong>Atmosphere:</strong> 78% Nitrogen, 21% Oxygen</li>
+        <li><strong>Moons:</strong> 1</li>
+        <li>
+          <strong>Age:</strong> <span id="earth-age">4.54 billion years</span>
+        </li>
+        <li><strong>Surface Area:</strong> ~510 million km²</li>
+        <li><strong>Circumference:</strong> ~40,075 km</li>
+        <li><strong>Gravity:</strong> ~9.807 m/s²</li>
+        <li><strong>Average Density:</strong> ~5.51 g/cm³</li>
+      </ul>
+    </section>
+
+    <!-- Side Menu: Full Quote -->
+    <section id="full-quote-section">
+      <h2>Carl Sagan's Reflection</h2>
+      <p>
+        “Look again at that dot. That's here. That's home. That's us. On it
+        everyone you love, everyone you know, every human being who ever was,
+        lived out their lives—on a mote of dust suspended in a sunbeam.”
+      </p>
+      <p>
+        “The Earth is a very small stage in a vast cosmic arena. Think of the
+        rivers of blood spilled by all those generals and emperors so that, in
+        glory and triumph, they could become the momentary masters of a fraction
+        of a dot. Think of the endless cruelties visited by the inhabitants of
+        one corner of this pixel on the scarcely distinguishable inhabitants of
+        some other corner, how frequent their misunderstandings, how eager they
+        are to kill one another, how fervent their hatreds.”
+      </p>
+      <p>
+        “Our posturings, our imagined self-importance, the delusion that we have
+        some privileged position in the Universe, are challenged by this point
+        of pale light. Our planet is a lonely speck in the great enveloping
+        cosmic dark. In our obscurity, in all this vastness, there is no hint
+        that help will come from elsewhere to save us from ourselves.”
+      </p>
+      <p>
+        “The Earth is the only world known so far to harbor life. There is
+        nowhere else, at least in the near future, to which our species could
+        migrate. Visit, yes. Settle, not yet. Like it or not, for the moment the
+        Earth is where we make our stand.”
+      </p>
+      <p>
+        “It has been said that astronomy is a humbling and character-building
+        experience. There is perhaps no better demonstration of the folly of
+        human conceits than this distant image of our tiny world. To me, it
+        underscores our responsibility to deal more kindly with one another, and
+        to preserve and cherish the pale blue dot, the only home we've ever
+        known.”
+      </p>
+      <p>
+        — Carl Sagan,
+        <em>Pale Blue Dot: A Vision of the Human Future in Space</em>
+      </p>
+    </section>
+
+    <!-- Voyager Pop-Out Modal -->
+    <div id="voyager-popout" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <div class="tabs">
+          <button class="tab-link active" data-tab="stats">Stats</button>
+          <button class="tab-link" data-tab="images">Images</button>
+          <button class="tab-link" data-tab="sun">Sun</button>
+          <button class="tab-link" data-tab="venus">Venus</button>
+          <button class="tab-link" data-tab="earth">Earth</button>
+          <button class="tab-link" data-tab="jupiter">Jupiter</button>
+          <button class="tab-link" data-tab="saturn">Saturn</button>
+          <button class="tab-link" data-tab="uranus">Uranus</button>
+          <button class="tab-link" data-tab="neptune">Neptune</button>
+        </div>
+        <!-- Stats Tab -->
+        <div id="stats" class="tab-content active">
+          <h3>Voyager 1 Live Stats</h3>
+          <p><strong>Launch Date:</strong> September 5, 1977</p>
+          <p>
+            <strong>Distance from Sun:</strong>
+            <span id="voyager-distance-miles">15,150,000,000 miles</span> (<span
+              id="voyager-distance-km"
+              >24,380,000,000 km</span
+            >)
+          </p>
+          <p><strong>Speed:</strong> 38,026 mph (61,198 km/h)</p>
+          <p>
+            <strong>Mission Status:</strong> In interstellar space, operational
+            and sending data
+          </p>
+          <p>
+            <strong>Primary Mission:</strong> Flybys of Jupiter (1979) and
+            Saturn (1980)
+          </p>
+          <p>
+            <strong>Extended Mission:</strong> Voyager Interstellar Mission
+            (VIM), entered interstellar space August 25, 2012
+          </p>
+          <p>
+            <strong>Instruments:</strong> Imaging Science System (ISS),
+            Ultraviolet Spectrometer (UVS), Plasma Wave Subsystem (PWS), Cosmic
+            Ray Subsystem (CRS)
+          </p>
+          <p>
+            <strong>How Family Portrait Was Captured:</strong> On February 14,
+            1990, at Carl Sagan's request, Voyager 1 turned its camera back
+            toward the Solar System from 6 billion kilometers (3.7 billion
+            miles) away, capturing 60 images of the Sun and six planets as tiny
+            dots, including the iconic 'Pale Blue Dot' of Earth.
+          </p>
+          <p><em>Updated live based on Voyager 1's trajectory.</em></p>
+        </div>
+        <!-- Images Tab -->
+        <div id="images" class="tab-content">
+          <h3>Family Portrait Composite</h3>
+          <img
+            src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/internal_resources/3429/Series_of_images_showing_the_planets_as_small_dots.jpeg?w=1280&h=633&fit=clip&crop=faces%2Cfocalpoint"
+            alt="Family Portrait Composite"
+          />
+          <p><strong>Date Taken:</strong> February 14, 1990</p>
+          <p><strong>Distance:</strong> 3.7 billion miles (6 billion km)</p>
+          <p>
+            <strong>Description:</strong> The Family Portrait is a series of 60
+            images captured by Voyager 1, showing the Sun and six planets
+            (Venus, Earth, Jupiter, Saturn, Uranus, Neptune) as small dots in
+            the vastness of space. This composite image showcases the planets as
+            tiny specks, with the 'Pale Blue Dot' emphasizing Earth's smallness
+            in the cosmos.
+          </p>
+        </div>
+        <!-- Sun Tab -->
+        <div id="sun" class="tab-content">
+          <h3>Sun - Family Portrait Frames</h3>
+          <p><strong>Date Taken:</strong> February 14, 1990</p>
+          <p><strong>Distance:</strong> ~3.7 billion miles (6 billion km)</p>
+          <p>
+            <strong>Description:</strong> Multiple frames capturing the Sun's
+            scattered light, including solar corona and lens flares.
+          </p>
+          <img
+            src="https://photojournal.jpl.nasa.gov/jpeg/PIA00450.jpg"
+            alt="Sun Frame 1"
+          />
+        </div>
+        <!-- Venus Tab -->
+        <div id="venus" class="tab-content">
+          <h3>Venus - Family Portrait Frames</h3>
+          <p><strong>Date Taken:</strong> February 14, 1990</p>
+          <p><strong>Distance:</strong> ~3.7 billion miles (6 billion km)</p>
+          <p>
+            <strong>Description:</strong> Venus as a faint crescent, shrouded in
+            its thick atmosphere.
+          </p>
+          <img
+            src="https://raw.githubusercontent.com/midasavocado/cool/refs/heads/main/Venus.jpeg"
+            alt="Venus Frame"
+          />
+        </div>
+        <!-- Earth Tab -->
+        <div id="earth" class="tab-content">
+          <h3>Earth - Pale Blue Dot Frames</h3>
+          <p><strong>Date Taken:</strong> February 14, 1990</p>
+          <p><strong>Distance:</strong> 3.7 billion miles (6 billion km)</p>
+          <p>
+            <strong>Description:</strong> Earth as a tiny blue dot in a sunbeam,
+            including the iconic Pale Blue Dot image.
+          </p>
+          <img
+            src="https://raw.githubusercontent.com/midasavocado/cool/refs/heads/main/Earth.jpeg"
+            alt="Pale Blue Dot"
+          />
+        </div>
+        <!-- Jupiter Tab -->
+        <div id="jupiter" class="tab-content">
+          <h3>Jupiter - Family Portrait Frames</h3>
+          <p><strong>Date Taken:</strong> February 14, 1990</p>
+          <p><strong>Distance:</strong> ~3.7 billion miles (6 billion km)</p>
+          <p>
+            <strong>Description:</strong> Jupiter’s bands faintly visible from
+            this vast distance.
+          </p>
+          <img
+            src="https://raw.githubusercontent.com/midasavocado/cool/refs/heads/main/Jupiter.jpeg"
+            alt="Jupiter Frame"
+          />
+        </div>
+        <!-- Saturn Tab -->
+        <div id="saturn" class="tab-content">
+          <h3>Saturn - Family Portrait Frames</h3>
+          <p><strong>Date Taken:</strong> February 14, 1990</p>
+          <p><strong>Distance:</strong> ~3.7 billion miles (6 billion km)</p>
+          <p>
+            <strong>Description:</strong> Saturn’s rings as a thin line,
+            captured from afar.
+          </p>
+          <img
+            src="https://raw.githubusercontent.com/midasavocado/cool/refs/heads/main/Saturn.jpeg"
+            alt="Saturn Frame"
+          />
+        </div>
+        <!-- Uranus Tab -->
+        <div id="uranus" class="tab-content">
+          <h3>Uranus - Family Portrait Frames</h3>
+          <p><strong>Date Taken:</strong> February 14, 1990</p>
+          <p><strong>Distance:</strong> ~3.7 billion miles (6 billion km)</p>
+          <p><strong>Description:</strong> Uranus as a pale greenish dot.</p>
+          <img
+            src="https://raw.githubusercontent.com/midasavocado/cool/refs/heads/main/Uranus.jpeg"
+            alt="Uranus Frame"
+          />
+        </div>
+        <!-- Neptune Tab -->
+        <div id="neptune" class="tab-content">
+          <h3>Neptune - Family Portrait Frames</h3>
+          <p><strong>Date Taken:</strong> February 14, 1990</p>
+          <p><strong>Distance:</strong> ~3.7 billion miles (6 billion km)</p>
+          <p><strong>Description:</strong> Neptune as a small blue speck.</p>
+          <img
+            src="https://raw.githubusercontent.com/midasavocado/cool/refs/heads/main/Neptune.jpeg"
+            alt="Neptune Frame"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Voyager Video (Always Visible) -->
+    <div class="voyager-overlay">
+      <iframe
+        width="300"
+        height="170"
+        src="https://www.youtube.com/embed/qYNIsgDrIRE?autoplay=1&mute=1&controls=0&loop=1&playlist=qYNIsgDrIRE&modestbranding=1"
+        title="Voyager 1 Trajectory"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <div class="video-cover"></div>
+      <div class="fade-left"></div>
+      <div class="fade-right"></div>
+    </div>
+
+    <!-- Audio Element for MP3 -->
+    <audio id="music-audio" autoplay loop>
+      <source
+        src="https://github.com/midasavocado/cool/raw/refs/heads/main/Interstellar%20Main%20Theme%20-%20Extra%20Extended%20-%20Soundtrack%20by%20%20Hans%20Zimmer.mp3"
+        autoplay
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
