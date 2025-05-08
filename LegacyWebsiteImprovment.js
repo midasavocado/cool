@@ -1,5 +1,5 @@
 (function () {
-  const TARGET_PREFIX = "https://www.thelegacyalliance.org/custom/";
+  const TARGET_PREFIX = "";
   const EXCLUDED_PAGES_CSV = "https://www.thelegacyalliance.org/custom/99522";
   const EXCLUDED_PAGES = EXCLUDED_PAGES_CSV.split(",").map(u => u.trim()).filter(Boolean);
   const here = window.location.href;
